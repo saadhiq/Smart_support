@@ -1,0 +1,20 @@
+{
+  "trained_at": "2026-11-23T03:12:46+00:00",
+  "sklearn_version": "1.9.1",
+  "best_C": 5,
+  "classes": [
+    "ACCOUNT",
+    "CANCEL",
+    "CONTACT",
+    "DELIVERY",
+    "FEEDBACK",
+    "INVOICE",
+    "ORDER",
+    "PAYMENT",
+    "REFUND",
+    "SHIPPING",
+    "SUBSCRIPTION"
+  ],
+  "test_accuracy": 0.9996,
+  "test_macro_f1": 0.9995
+}

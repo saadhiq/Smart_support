@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Tickets{% endblock %}
+{% block nav %}{% include "team_nav.html" %}{% endblock %}
+{% block content %}
+<h1>Tickets</h1>
+<form class="filter" method="get" action="/team">
+  <div>
+    <label for="category">Category</label>
+    <select id="category" name="category">
+      <option value="">All categories</option>
+      {% for c in categories %}
+        <option value="{{ c }}" {{ 'selected' if c == selected }}>{{ c }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <button type="submit">Filter</button>
+</form>
+<p class="muted">{{ tickets|length }} ticket{{ '' if tickets|length == 1 else 's' }}{{ ' in ' ~ selected if selected }}</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>#</th><th>Created (UTC)</th><th>From</th><th>Category</th><th>Priority</th><th>Status</th><th>Draft</th></tr></thead>
+  <tbody>
+  {% for t in tickets %}
+    <tr>
+      <td><a href="/team/tickets/{{ t.id }}">#{{ t.id }}</a></td>
+      <td>{{ t.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+      <td>{{ t.name }}</td>
+      <td>{{ t.category }}
+        {% if t.needs_review %}<span class="badge review" title="Model confidence {{ '%.2f'|format(t.category_confidence) }}">needs review</span>{% endif %}
+      </td>
+      <td><span class="badge p-{{ t.priority.value }}">{{ t.priority.value }}</span></td>
+      <td>{{ t.status.value | replace('_', ' ') }}</td>
+      <td class="muted">{{ 'no match' if t.draft_no_match and t.draft_status.value == 'ready' else t.draft_status.value }}</td>
+    </tr>
+  {% else %}
+    <tr><td colspan="7" class="muted">No tickets.</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

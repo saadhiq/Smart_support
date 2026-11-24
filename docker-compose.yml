@@ -1,0 +1,15 @@
+services:
+  web:
+    build: .
+    ports:
+      - "127.0.0.1:${APP_PORT:-8000}:8000"
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: sqlite:////var/lib/supportdesk/support.db
+    volumes:
+      - support-db:/var/lib/supportdesk
+    restart: unless-stopped
+
+volumes:
+  support-db:

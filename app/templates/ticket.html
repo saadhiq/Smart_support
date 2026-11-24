@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Ticket #{{ ticket.id }}{% endblock %}
+{% block nav %}{% include "team_nav.html" %}{% endblock %}
+{% block content %}
+<p><a href="/team">&larr; All tickets</a></p>
+<h1>Ticket #{{ ticket.id }}</h1>
+{% if updated %}<div class="notice ok">Status updated.</div>{% endif %}
+<div class="card">
+  <dl>
+    <dt>From</dt><dd>{{ ticket.name }} &lt;{{ ticket.email }}&gt;</dd>
+    <dt>Created</dt><dd>{{ ticket.created_at.strftime('%Y-%m-%d %H:%M') }} UTC</dd>
+    <dt>Category</dt><dd>{{ ticket.category }}
+      <span class="muted">(confidence {{ '%.2f'|format(ticket.category_confidence) }})</span>
+      {% if ticket.needs_review %}<span class="badge review">needs review</span>{% endif %}</dd>
+    <dt>Priority</dt><dd><span class="badge p-{{ ticket.priority.value }}">{{ ticket.priority.value }}</span></dd>
+  </dl>
+  <h2>Message</h2>
+  <p class="message">{{ ticket.message }}</p>
+</div>
+<div class="card">
+  <h2>Status</h2>
+  <form method="post" action="/team/tickets/{{ ticket.id }}/status">
+    <select name="status" aria-label="Status">
+      {% for s in statuses %}
+        <option value="{{ s.value }}" {{ 'selected' if s == ticket.status }}>{{ s.value | replace('_', ' ') }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit">Update status</button>
+  </form>
+</div>
+<div class="card">
+  <h2>Suggested reply</h2>
+  <p class="muted">Drafted by an AI from the FAQ only. Review before sending.</p>
+  {% if ticket.draft_status.value == 'pending' %}
+    <p class="muted">Draft is being generated. <a href="/team/tickets/{{ ticket.id }}">Refresh</a> in a few seconds.</p>
+  {% else %}
+    {% if ticket.draft_status.value == 'failed' %}
+      <div class="notice err">No AI draft: {{ ticket.draft_error }}</div>
+    {% elif ticket.draft_error %}
+      <div class="notice err">{{ ticket.draft_error }}</div>
+    {% endif %}
+    {% if ticket.draft_no_match %}
+      <div class="notice err">No matching FAQ entry.</div>
+    {% endif %}
+    <p class="message">{{ ticket.draft_reply }}</p>
+    {% if used_faq %}
+      <p class="muted">Used:
+        {% for e in used_faq %}{{ e.id }} ({{ e.question }}){{ ', ' if not loop.last }}{% endfor %}
+      </p>
+    {% endif %}
+  {% endif %}
+  <form method="post" action="/team/tickets/{{ ticket.id }}/draft">
+    <button type="submit">Regenerate</button>
+  </form>
+</div>
+{% endblock %}

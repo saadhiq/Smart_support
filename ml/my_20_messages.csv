@@ -1,0 +1,21 @@
+text,true_category
+"picked medium by mistake. can u switch it to large before it goes out?",ORDER
+"typed 41 instead of 14 for the house number. can u fix where it's going?",SHIPPING
+"my bank app says declined but i have money. why wont checkout go thru?",PAYMENT
+"boss needs the invoice for last tuesday's order. can u email me a copy?",INVOICE
+"sent the shoes back a week ago. when do i get the money back?",REFUND
+"any chance you deliver on saturdays? only day im home",DELIVERY
+"if i cancel today how much will u charge me?",CANCEL
+"that driver was really helpful. where can i leave a review?",FEEDBACK
+"new phone, forgot my password. how do i get back in?",ACCOUNT
+"pls stop the weekly deals emails. inbox is full",SUBSCRIPTION
+"can i talk to an actual person? the chat keeps sending me in circles",CONTACT
+"ordered twice by accident. can you cancel just the second one?",ORDER
+"i havent ordered yet. where do i save my new mailing adress?",SHIPPING
+"can i pay with two cards or does it all have to go on one?",PAYMENT
+"invoice says 3 mugs but i only bought 2. can someone check the bill?",INVOICE
+"box is open but i never used it. can i still get my money back?",REFUND
+"need it by fri. do u have an overnight option to my town?",DELIVERY
+"i might keep the booking. just wanna know the fee if i cancel",CANCEL
+"where do i send a complaint about how i was treated at pickup?",FEEDBACK
+"keeps opening my work profile. how do i switch to my personal one?",ACCOUNT

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "FAQ-01",
+    "question": "What is your refund policy?",
+    "answer": "You can request a refund within 30 days of delivery for items that are unused and in their original packaging. Go to My Orders, choose the order and select Request refund. After we receive the item back, the refund is paid to your original payment method within 5-10 business days."
+  },
+  {
+    "id": "FAQ-02",
+    "question": "Where is my refund?",
+    "answer": "You can see the status of a refund under My Orders > Refunds. Approved refunds reach your original payment method within 5-10 business days. If it has been longer than 10 business days, contact us with your order number."
+  },
+  {
+    "id": "FAQ-03",
+    "question": "How do I cancel an order?",
+    "answer": "You can cancel an order free of charge until it ships: go to My Orders and select Cancel order. Once an order has shipped it can no longer be cancelled, but you can return it under our refund policy."
+  },
+  {
+    "id": "FAQ-04",
+    "question": "Is there a cancellation fee?",
+    "answer": "There is no fee for cancelling an order before it ships. Subscription plans cancelled before the end of their minimum term have an early cancellation fee; the exact amount for your plan is shown under Account > Plan before you confirm."
+  },
+  {
+    "id": "FAQ-05",
+    "question": "Can I change my order?",
+    "answer": "Until your order ships you can add or remove items or change sizes under My Orders > Edit order. After it has shipped, the order cannot be changed."
+  },
+  {
+    "id": "FAQ-06",
+    "question": "How long does delivery take and where do you ship?",
+    "answer": "Standard delivery takes 3-5 business days and express delivery takes 1-2 business days. The countries we deliver to are listed at checkout after you enter your address."
+  },
+  {
+    "id": "FAQ-07",
+    "question": "How can I track my order?",
+    "answer": "When your order ships we email you a tracking link. You can also see the current status of every order under My Orders."
+  },
+  {
+    "id": "FAQ-08",
+    "question": "How do I change my shipping address?",
+    "answer": "You can change the delivery address of an order under My Orders until the order ships. To change the default address for future orders, go to Account > Addresses."
+  },
+  {
+    "id": "FAQ-09",
+    "question": "Where can I get an invoice?",
+    "answer": "Every order has a PDF invoice under My Orders > Invoice. Invoices cannot be edited after they are issued; if your company details are wrong, contact us with the order number and the correct details."
+  },
+  {
+    "id": "FAQ-10",
+    "question": "Which payment methods do you accept?",
+    "answer": "We accept Visa, Mastercard, American Express, PayPal and our gift cards. Cash on delivery is not available."
+  },
+  {
+    "id": "FAQ-11",
+    "question": "My payment failed or I was charged twice. What should I do?",
+    "answer": "If a payment fails, check your card details, make sure the card allows online payments, or try another payment method. If you were charged but did not receive an order confirmation, or were charged twice, contact us with the date and amount of each charge so the team can investigate."
+  },
+  {
+    "id": "FAQ-12",
+    "question": "I forgot my password or cannot log in.",
+    "answer": "Select Forgot password on the login page and we will email you a reset link that is valid for 1 hour. If the email does not arrive within a few minutes, check your spam folder."
+  },
+  {
+    "id": "FAQ-13",
+    "question": "How do I create, change or delete my account?",
+    "answer": "You can create an account at checkout or with Sign up on the login page. Change your name, email or password under Account > Profile. To delete your account, go to Account > Privacy > Delete account; deletion is permanent and removes your order history."
+  },
+  {
+    "id": "FAQ-14",
+    "question": "How do I unsubscribe from the newsletter?",
+    "answer": "Use the Unsubscribe link at the bottom of any newsletter email, or turn the newsletter off under Account > Notifications. The change can take up to 48 hours to apply."
+  },
+  {
+    "id": "FAQ-15",
+    "question": "How do I make a complaint or leave feedback?",
+    "answer": "Send us your complaint or feedback through this support form, including your order number if it is about an order. A team member reads every message and replies to complaints within 2 business days."
+  },
+  {
+    "id": "FAQ-16",
+    "question": "When can I contact a person?",
+    "answer": "Our support team works Monday to Friday, 9:00-18:00. Messages sent through this support form outside those hours are answered on the next working day. We do not offer phone support."
+  }
+]

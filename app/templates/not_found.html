@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Not found{% endblock %}
+{% block nav %}{% include "team_nav.html" %}{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Ticket #{{ ticket_id }} not found</h1>
+  <p><a href="/team">Back to all tickets</a></p>
+</div>
+{% endblock %}
