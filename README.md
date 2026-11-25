@@ -75,7 +75,7 @@ The tests run offline with a fake LLM and a temporary SQLite database.
 .venv\Scripts\python -m ml.evaluate
 ```
 
-Retraining downloads the public Bitext dataset. The trained model is committed at
+Retraining downloads the public Bitext dataset. Trained model is committed at
 `models/classifier.joblib`, so running the app does not need the dataset.
 
 `ml.evaluate` rewrites `ml/reports/my_20.md`, so keep a copy of any notes in that file first.
